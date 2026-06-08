@@ -1,0 +1,23 @@
+{
+  "name": "jpg-perfume-backend",
+  "version": "1.0.0",
+  "description": "Jean Paul Gaultier Perfume E-commerce Backend API",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": [
+    "ecommerce",
+    "perfume",
+    "jean-paul-gaultier"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3"
+  }
+}

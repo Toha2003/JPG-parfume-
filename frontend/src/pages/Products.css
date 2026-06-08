@@ -1,0 +1,222 @@
+.products-page {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.products-header {
+  margin: 12px 0 30px;
+  padding: 46px 0 32px;
+}
+
+.products-header .container {
+  text-align: center;
+  padding-top: 34px;
+  padding-bottom: 34px;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at top right, rgba(202, 162, 77, 0.16), transparent 24%),
+    linear-gradient(135deg, #17130f 0%, #2a2118 100%);
+  box-shadow: var(--shadow-lg);
+}
+
+.products-header h1 {
+  color: #f1dbac;
+  margin-bottom: 10px;
+}
+
+.products-header p {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 16px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.products-section {
+  padding: 0 0 var(--spacing-2xl);
+}
+
+.products-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(37, 29, 18, 0.08);
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(31, 22, 13, 0.06);
+  flex-wrap: wrap;
+}
+
+.controls-left,
+.controls-right {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-control span {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+.search-control input {
+  min-width: 280px;
+  min-height: 46px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.checkbox-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-control input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--luxury-gold);
+}
+
+.checkbox-control span,
+.sort-control span {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sort-control select {
+  min-width: 220px;
+  min-height: 46px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 22px;
+  margin-bottom: var(--spacing-xl);
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-2xl);
+}
+
+.spinner {
+  width: 42px;
+  height: 42px;
+  border: 3px solid rgba(37, 29, 18, 0.1);
+  border-top-color: var(--luxury-gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.no-products {
+  text-align: center;
+  padding: 42px 24px;
+  color: var(--text-light);
+  font-size: 16px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(37, 29, 18, 0.08);
+}
+
+.results-count {
+  text-align: center;
+  padding: 16px;
+  color: var(--text-light);
+  font-size: 13px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(37, 29, 18, 0.06);
+}
+
+@media (max-width: 768px) {
+  .products-header {
+    margin-bottom: 20px;
+    padding: 12px 0 24px;
+  }
+
+  .products-header .container {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border-radius: 28px;
+  }
+
+  .products-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .controls-left,
+  .controls-right,
+  .sort-control,
+  .search-control {
+    width: 100%;
+  }
+
+  .sort-control,
+  .search-control {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-control input,
+  .sort-control select {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-header .container {
+    border-radius: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .products-grid {
+    gap: 12px;
+  }
+
+  .products-controls {
+    padding: 14px;
+    border-radius: 20px;
+  }
+}
